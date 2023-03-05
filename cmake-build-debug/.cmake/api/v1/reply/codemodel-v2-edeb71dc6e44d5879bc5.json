@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Yuto/CLionProjects/Connect4_Machine_Learning/cmake-build-debug",
-		"source" : "C:/Users/Yuto/CLionProjects/Connect4_Machine_Learning"
+		"build" : "C:/Users/alluo/Desktop/Machine_Leanrning_Connect4/cmake-build-debug",
+		"source" : "C:/Users/alluo/Desktop/Machine_Leanrning_Connect4"
 	},
 	"version" : 
 	{

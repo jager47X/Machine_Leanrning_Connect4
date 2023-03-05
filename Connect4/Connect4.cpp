@@ -75,6 +75,7 @@ bool Connect4::WinCheck(char activePlayer)
     for (int BOARD_COLUMN = COLS_SIZE-1; BOARD_COLUMN >=0 ; BOARD_COLUMN--) {
         for (int BOARD_ROW = ROWS_SIZE - 1; BOARD_ROW >= 0; BOARD_ROW--) {
             if (
+                (BOARD_COLUMN>3)&&
                     (Board[BOARD_COLUMN][BOARD_ROW].ToactivePlayer() == activePlayer) &&
                     (Board[BOARD_COLUMN-1][BOARD_ROW].ToactivePlayer() == activePlayer) &&
                     (Board[BOARD_COLUMN-2][BOARD_ROW].ToactivePlayer() == activePlayer) &&

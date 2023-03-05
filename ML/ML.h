@@ -28,7 +28,7 @@ public:
 private:
     const static int TEST=100;
     int  winChoice[ROWS_SIZE];
-    int lastFileIndex=0;
+    int lastFileIndex=100;
 
     Connect4 *CSV;//dynamic allocation needed
     int selection;

@@ -19,16 +19,17 @@ ML::File_management::File_management() {
 
 }
 int ML::File_management:: New_Log_Index() {
-    std::string filepath = "\cmake-build-debug\\database_1\\";
-    std::string logpath = "logfile\\";
+    std::string filepath = "..\\cmake-build-debug\\database_1\\";
     std::string logIndex = filepath + "logIndex.txt";
     std::string log_csv = filepath + "logAll.csv";
 
     std::cout << "New_Log_Index Opened\n";
     int index = 0;
     std::ifstream read;
+
+    //absolute path... :( just for the test 
     read.open(logIndex.c_str());
-    std::cout << logIndex << "\n";
+    
     if (read.is_open()) {
         while (!read.eof()) {
             read >> index;
@@ -46,10 +47,10 @@ int ML::File_management:: New_Log_Index() {
 }
 
 void ML::File_management::CombineFiles(int FileIndex) {
-    std::string filepath = "\cmake-build-debug\\database_1\\";
-    std::string logpath = "logfile\\";
-    std::string logIndex = filepath + "logIndex.txt";
+    std::string filepath = "..\\cmake-build-debug\\database_1\\";
     std::string log_csv = filepath + "logAll.csv";
+    std::string logpath = "logfile\\";
+
 
     std::cout<<"CombineFiles is opened\n";
     std::ofstream Write_Csv;
@@ -82,7 +83,8 @@ void ML::File_management::CombineFiles(int FileIndex) {
 
 
 std::string ML::File_management::NameFile(int CURRENT_LOG_FILE_INDEX) {
-    std::string filepath = "\cmake-build-debug\\database_1\\";
+
+    std::string filepath = "..\\cmake-build-debug\\database_1\\";
     std::string logpath= "logfile\\";
     std::string logIndex = filepath + "logIndex.txt";
     std::string log_csv= filepath + "logAll.csv";
@@ -100,11 +102,14 @@ std::string ML::File_management::NameFile(int CURRENT_LOG_FILE_INDEX) {
 }
 
 void ML::File_management::InputCsv(Connect4 *CSV,int index) {
+
+    std::string filepath = "..\\cmake-build-debug\\database_1\\";
+    std::string log_csv = filepath + "logAll.csv";
+
     std::string Logfile = " ";
     int CSV_Selction;
     std::ifstream read;
-
-    read.open("logfile\\logAll.csv");
+    read.open(log_csv.c_str());
 
     if (read.is_open())
     {

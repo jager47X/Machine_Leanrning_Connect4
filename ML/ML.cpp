@@ -4,12 +4,15 @@ ML::ML() {
     srand((unsigned)time(NULL));
     File_management fm(this->lastFileIndex);
    
-    std::cout << "lastfileidx" << lastFileIndex << "\n";
+ //   std::cout << "lastfileidx" << lastFileIndex << "\n";
+    CSV = new Connect4[lastFileIndex+1];
+
     for(int i=0; i < lastFileIndex; i++) {
         CSV[i] = *new Connect4();
         File_management FM(CSV);
-          fm.InputCsv(CSV,i+1);
+
     }
+    fm.InputCsv(CSV,lastFileIndex);
     selection=0;
 }
 ML::~ML(){

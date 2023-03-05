@@ -19,17 +19,22 @@ ML::File_management::File_management() {
 
 }
 int ML::File_management:: New_Log_Index() {
+    std::string filepath = "\cmake-build-debug\\database_1\\";
+    std::string logpath = "logfile\\";
+    std::string logIndex = filepath + "logIndex.txt";
+    std::string log_csv = filepath + "logAll.csv";
+
     std::cout << "New_Log_Index Opened\n";
     int index = 0;
     std::ifstream read;
     read.open(logIndex.c_str());
-
+    std::cout << logIndex << "\n";
     if (read.is_open()) {
         while (!read.eof()) {
             read >> index;
         }
     } else {
-        std::cout << "No log files are found";
+        std::cout << "No log files are found\n";
         std::ofstream write;
         write.open(logIndex.c_str());
         write << 0;
@@ -41,6 +46,11 @@ int ML::File_management:: New_Log_Index() {
 }
 
 void ML::File_management::CombineFiles(int FileIndex) {
+    std::string filepath = "\cmake-build-debug\\database_1\\";
+    std::string logpath = "logfile\\";
+    std::string logIndex = filepath + "logIndex.txt";
+    std::string log_csv = filepath + "logAll.csv";
+
     std::cout<<"CombineFiles is opened\n";
     std::ofstream Write_Csv;
     std::ifstream Read_Txt;
@@ -72,7 +82,7 @@ void ML::File_management::CombineFiles(int FileIndex) {
 
 
 std::string ML::File_management::NameFile(int CURRENT_LOG_FILE_INDEX) {
-    std::string filepath = "database_1\\";
+    std::string filepath = "\cmake-build-debug\\database_1\\";
     std::string logpath= "logfile\\";
     std::string logIndex = filepath + "logIndex.txt";
     std::string log_csv= filepath + "logAll.csv";

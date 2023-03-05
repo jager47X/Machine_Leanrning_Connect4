@@ -3,8 +3,8 @@
 ML::ML() {
     srand((unsigned)time(NULL));
     File_management fm(this->lastFileIndex);
-
-
+   
+    std::cout << "lastfileidx" << lastFileIndex << "\n";
     for(int i=0; i < lastFileIndex; i++) {
         CSV[i] = *new Connect4();
         File_management FM(CSV);

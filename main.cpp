@@ -1,5 +1,3 @@
-
-
 #include <cstdlib>
 #include <iostream>
 #include "Connect4/Connect4.h"
@@ -63,6 +61,7 @@ bool play() {
     MLAgents.OutputCSV(game);
 
     std::cout << "GAME OVER.\n";
+//    sleep(10);
     return true;
 }
 

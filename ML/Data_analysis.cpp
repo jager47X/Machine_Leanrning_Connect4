@@ -20,7 +20,7 @@ void ML::Data_analysis::Current_Output(Connect4 CURRENT_BOARD){
             owner=std::to_string(Current_Board.Board[COLUMN][ROW].OwnerOfTile);
         }
     }
-    for(int i;i<42;i++){
+    for(int i=0;i<42;i++){
         boardArray[i]=winner+turn+owner;
     }
 }
@@ -32,7 +32,7 @@ ML::Data_analysis::Data_analysis(int lastFileIndex,Connect4 *CSV) {
 
 
 bool ML::Data_analysis::Compare_Board(){
-    int Match;
+    int Match=0;
     for(int csv_line=1;csv_line<lastFileIndex+1;csv_line++) {
         int index=0;
         for (int COLUMN = 0; COLUMN <COLS_SIZE; COLUMN++) {

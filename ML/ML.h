@@ -28,7 +28,7 @@ public:
 private:
     const static int TEST=100;
     int  winChoice[ROWS_SIZE];
-    int lastFileIndex;
+    int lastFileIndex=0;
 
     Connect4 *CSV;//dynamic allocation needed
     int selection;
@@ -47,10 +47,6 @@ private:
     };
     class File_management{
     private:
-        std::string filepath = "database_1\\";
-        std::string logpath= "logfile\\";
-        std::string logIndex = filepath + "logIndex.txt";
-        std::string log_csv= filepath + "logAll.csv";
         int lastFileIndex;
         std::ofstream NewFile;
     public:
